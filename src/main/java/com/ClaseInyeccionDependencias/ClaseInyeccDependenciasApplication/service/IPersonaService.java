@@ -8,5 +8,7 @@ public interface IPersonaService {
     List<Persona> obtenerTodos();
     Persona obtenerPorId(Long id);
     void guardarPersona(Persona persona);
+    void deletePersona(Long id);
+    void editarPersona(Long id, Persona personaActualizada);
 
 }

@@ -1,13 +1,19 @@
 package com.ClaseInyeccionDependencias.ClaseInyeccDependenciasApplication.model;
 
+import jakarta.persistence.*;
 import lombok.*;
 
 @Data
 
+@Entity
 public class Persona {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Aqui se establece como un AUTOINCREMENT
     private Long id_Persona;
+    @Column(nullable = false, length = 100) //este es como el VARCHAR(100) NOT NULL
     private String nombre;
     private String cargo;
+
 
     public Persona() {
     }

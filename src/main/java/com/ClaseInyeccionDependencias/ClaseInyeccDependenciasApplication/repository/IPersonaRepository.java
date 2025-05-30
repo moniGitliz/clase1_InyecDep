@@ -1,11 +1,16 @@
 package com.ClaseInyeccionDependencias.ClaseInyeccDependenciasApplication.repository;
 
 import com.ClaseInyeccionDependencias.ClaseInyeccDependenciasApplication.model.Persona;
-import java.util.List;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface IPersonaRepository {
-    List<Persona> findAll();
-    Persona findById(Long id);
-    public void save(Persona persona);
+import java.util.List;
+@Repository
+public interface IPersonaRepository extends JpaRepository<Persona, Long> {
+
+
+//    List<Persona> findAll();
+//    Persona findById(Long id);
+//    public void save(Persona persona);
 
 }
